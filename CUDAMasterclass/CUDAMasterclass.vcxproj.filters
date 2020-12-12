@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="convolution_1d_with_global_mem_access.cu">
+      <Filter>Algorithms\Convolution</Filter>
+    </CudaCompile>
+    <CudaCompile Include="convolution_1d_with_constant_memory_mask.cu">
+      <Filter>Algorithms\Convolution</Filter>
+    </CudaCompile>
+    <CudaCompile Include="convolution_1d_with_shared_memory.cu">
+      <Filter>Algorithms\Convolution</Filter>
+    </CudaCompile>
+    <CudaCompile Include="radix_sort_v01.cu">
+      <Filter>Algorithms\Radix sort</Filter>
+    </CudaCompile>
+    <CudaCompile Include="prefix_sum_v01.cu">
+      <Filter>Algorithms\Prefix sum</Filter>
+    </CudaCompile>
+    <CudaCompile Include="prefix_sum_v02.cu">
+      <Filter>Algorithms\Prefix sum</Filter>
+    </CudaCompile>
+    <CudaCompile Include="histogram_v01.cu">
+      <Filter>Algorithms\Histogram</Filter>
+    </CudaCompile>
+    <CudaCompile Include="sparse_matrix_v01.cu">
+      <Filter>Algorithms\Sparse Matrix</Filter>
+    </CudaCompile>
+    <CudaCompile Include="compact.cu">
+      <Filter>Algorithms\Compact</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cuda_common.cu">
+      <Filter>Headers</Filter>
+    </CudaCompile>
+    <CudaCompile Include="compact2d.cu">
+      <Filter>Algorithms\Compact</Filter>
+    </CudaCompile>
+    <CudaCompile Include="matrix_transpose.cu">
+      <Filter>Algorithms\MatrixOps</Filter>
+    </CudaCompile>
+    <CudaCompile Include="matrix_transpose_book.cu">
+      <Filter>Algorithms\Research</Filter>
+    </CudaCompile>
+    <CudaCompile Include="print_my_index.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+    <CudaCompile Include="2_warp_id_and_thread_id.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="3_warp_divergence.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="6_device_query_in_occupancy.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="6_occupancy_test.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="7_sum_array.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="8_synchronization_and_reduction.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="10_reduction_with_unrolling_loop.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="test_code.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="9_reduction_warp_divergence_improved.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="9_reduction_interleaved_pairs.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="11_unrolling_warps_unroll.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="2_register_usage.cu">
+      <Filter>Section 3</Filter>
+    </CudaCompile>
+    <CudaCompile Include="3_pinned_mem_test.cu">
+      <Filter>Section 3</Filter>
+    </CudaCompile>
+    <CudaCompile Include="4_zero_copy_memory.cu">
+      <Filter>Section 3</Filter>
+    </CudaCompile>
+    <CudaCompile Include="1_intro_smem.cu">
+      <Filter>Section 4</Filter>
+    </CudaCompile>
+    <CudaCompile Include="3_row_major_column_major_and_access_mode_test.cu">
+      <Filter>Section 4</Filter>
+    </CudaCompile>
+    <CudaCompile Include="4_shared_memory_static_vs_dynamic.cu">
+      <Filter>Section 4</Filter>
+    </CudaCompile>
+    <CudaCompile Include="test.cu">
+      <Filter>Section 4</Filter>
+    </CudaCompile>
+    <CudaCompile Include="5_smem_padding.cu">
+      <Filter>Section 4</Filter>
+    </CudaCompile>
+    <CudaCompile Include="7_reduction_smem.cu">
+      <Filter>Section 4</Filter>
+    </CudaCompile>
+    <CudaCompile Include="7_reduce_smem_complete_unrolling.cu">
+      <Filter>Section 4</Filter>
+    </CudaCompile>
+    <CudaCompile Include="8_mat_transpose_smem.cu">
+      <Filter>Section 4</Filter>
+    </CudaCompile>
+    <CudaCompile Include="10_constant_stencil_computation.cu">
+      <Filter>Section 4</Filter>
+    </CudaCompile>
+    <CudaCompile Include="1_need for understand memory model.cu">
+      <Filter>Section 3</Filter>
+    </CudaCompile>
+    <CudaCompile Include="6_misaligned_read.cu">
+      <Filter>Section 3</Filter>
+    </CudaCompile>
+    <CudaCompile Include="7_misaligned_writes.cu">
+      <Filter>Section 3</Filter>
+    </CudaCompile>
+    <CudaCompile Include="8_SOA_vs_AOS.cu">
+      <Filter>Section 3</Filter>
+    </CudaCompile>
+    <CudaCompile Include="10_matrix_transpose.cu">
+      <Filter>Section 3</Filter>
+    </CudaCompile>
+    <CudaCompile Include="5_sum_array_with_unified_memory.cu">
+      <Filter>Section 3</Filter>
+    </CudaCompile>
+    <CudaCompile Include="9_summary of performance tuning so far.cu">
+      <Filter>Section 3</Filter>
+    </CudaCompile>
+    <CudaCompile Include="12_simple_shfl_operations.cu">
+      <Filter>Section 4</Filter>
+    </CudaCompile>
+    <CudaCompile Include="13_reduction_with_warp_shuffle.cu">
+      <Filter>Section 4</Filter>
+    </CudaCompile>
+    <CudaCompile Include="12_reduction_complete_unrolling.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="sec1_test.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+    <CudaCompile Include="test_stream.cu">
+      <Filter>Section 5</Filter>
+    </CudaCompile>
+    <CudaCompile Include="2_numeriacal_accuracy_float_vs_double.cu">
+      <Filter>Section 6</Filter>
+    </CudaCompile>
+    <CudaCompile Include="2_floating_point_performance_comparison.cu">
+      <Filter>Section 6</Filter>
+    </CudaCompile>
+    <CudaCompile Include="3_standard_intrinsic.cu">
+      <Filter>Section 6</Filter>
+    </CudaCompile>
+    <CudaCompile Include="3_standard_intrinsic_performance_cmp.cu">
+      <Filter>Section 6</Filter>
+    </CudaCompile>
+    <CudaCompile Include="4_atomic_intro.cu">
+      <Filter>Section 6</Filter>
+    </CudaCompile>
+    <CudaCompile Include="4_atomic_add_groundup.cu">
+      <Filter>Section 6</Filter>
+    </CudaCompile>
+    <CudaCompile Include="4_atomic_performance_test.cu">
+      <Filter>Section 6</Filter>
+    </CudaCompile>
+    <CudaCompile Include="2_multiple_kernel_launch.cu">
+      <Filter>Section 5</Filter>
+    </CudaCompile>
+    <CudaCompile Include="2_nvvp_output.cu">
+      <Filter>Section 5</Filter>
+    </CudaCompile>
+    <CudaCompile Include="4_sum_array_overlapping_ops.cu">
+      <Filter>Section 5</Filter>
+    </CudaCompile>
+    <CudaCompile Include="5_blocking_nonblocking_example.cu">
+      <Filter>Section 5</Filter>
+    </CudaCompile>
+    <CudaCompile Include="7_timer_with_cuda_events.cu">
+      <Filter>Section 5</Filter>
+    </CudaCompile>
+    <CudaCompile Include="8_inter_stream_dependencies.cu">
+      <Filter>Section 5</Filter>
+    </CudaCompile>
+    <CudaCompile Include="9_callback_example.cu">
+      <Filter>Section 5</Filter>
+    </CudaCompile>
+    <CudaCompile Include="3_simple_cuda_stream_modified.cu">
+      <Filter>Section 5</Filter>
+    </CudaCompile>
+    <CudaCompile Include="convolution.cu">
+      <Filter>Section 7\Convolution</Filter>
+    </CudaCompile>
+    <CudaCompile Include="scan.cu">
+      <Filter>Section 7\Scan</Filter>
+    </CudaCompile>
+    <CudaCompile Include="histogram.cu">
+      <Filter>Section 7\Histogram</Filter>
+    </CudaCompile>
+    <CudaCompile Include="13_reduction_with_complete_unroll_and_template_func.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="13_reduction_performance_comparison.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="14_dynamic_parallelism.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="14_reduction with dynamic parallelism.cu">
+      <Filter>Section 2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="merge_sort.cu">
+      <Filter>Section 7\MergeSort</Filter>
+    </CudaCompile>
+    <CudaCompile Include="4_hello_cuda.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+    <CudaCompile Include="5_basic_elements.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+    <CudaCompile Include="7_organization_of_threads.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+    <CudaCompile Include="6_organization_of_threads.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+    <CudaCompile Include="9_unique_index_calculation_threadIdx_blockIdx_blockDim.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+    <CudaCompile Include="10_index calculation for 2D grid.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+    <CudaCompile Include="11_index calculation for 2D grid 2D thread blocks.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+    <CudaCompile Include="12_memory_transfer.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+    <CudaCompile Include="14_sum_array.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+    <CudaCompile Include="17_device_query.cu">
+      <Filter>Section 1</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Algorithms">
+      <UniqueIdentifier>{9d3893f0-3032-455d-98f1-dd1c09b77832}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms\Convolution">
+      <UniqueIdentifier>{83911c4c-8e34-4261-9b13-18ef95098d84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms\Radix sort">
+      <UniqueIdentifier>{5d65ea28-79ac-4ef0-84a8-5835cd86b6d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms\Sparse Matrix">
+      <UniqueIdentifier>{5759c63b-406c-4742-a2d5-62a5ed51d5ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms\Prefix sum">
+      <UniqueIdentifier>{da933f0d-fa1e-4495-a4a6-eee7bb79593f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{f4b3ace2-56da-4b7d-9105-a943a95349b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms\Histogram">
+      <UniqueIdentifier>{94c5451e-bf70-4dfb-bd2b-19a3978c9322}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms\Compact">
+      <UniqueIdentifier>{67b4e181-514e-4851-89d0-7086b9b88e88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms\Bitonic sort">
+      <UniqueIdentifier>{27bc6d67-fe12-48cf-9e59-e9de2d1c4713}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms\Hash table">
+      <UniqueIdentifier>{992473ce-80d7-4aae-83ae-a03e0dd7a9b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms\MatrixOps">
+      <UniqueIdentifier>{d3062d89-d0f4-4304-8bd3-b675ae342351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms\Research">
+      <UniqueIdentifier>{d7b5b266-e481-4936-a282-50e56b4c4f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 2">
+      <UniqueIdentifier>{17960b25-7429-4452-814c-fef08e9ed78e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 1">
+      <UniqueIdentifier>{4a21e887-9da4-41a3-ba53-11a37e2acd7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 3">
+      <UniqueIdentifier>{6e9f3f7f-1b45-4a9f-8014-f0c333927e83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 4">
+      <UniqueIdentifier>{c5fd9d47-82d1-49ca-808d-3f3e9f5e84ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 5">
+      <UniqueIdentifier>{0cda5c86-b291-4e5b-a5d9-585d56658874}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 6">
+      <UniqueIdentifier>{fff36c46-b546-4f25-a139-28488d340a89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 7">
+      <UniqueIdentifier>{08288d7a-1be1-4f26-afe2-925862dcaba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 7\Convolution">
+      <UniqueIdentifier>{f890ffe6-2ca3-468f-b0db-b20431615017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 7\Scan">
+      <UniqueIdentifier>{f5a640a8-957f-4170-8511-081a489c1f73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 7\Compact">
+      <UniqueIdentifier>{177625da-17fc-48b6-bb67-b1d62c3e18f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 7\Radix sort">
+      <UniqueIdentifier>{50f55f7b-40f8-47d4-9c4b-18173458ba7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 7\MergeSort">
+      <UniqueIdentifier>{f3e12035-aa1c-4d9a-bdeb-9ce1d15ad125}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 7\Histogram">
+      <UniqueIdentifier>{52c21d7b-d167-49dc-bfa5-edc147f898fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 7\Hashtable">
+      <UniqueIdentifier>{ac190447-3b20-4b2f-b32b-f47746c357ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 7\Sparse matrix -vector multiplication">
+      <UniqueIdentifier>{fcae3c52-163d-46e3-b282-62a8cf4bb4ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Section 7\AES">
+      <UniqueIdentifier>{43aff571-2c68-472c-abfa-50c68f220a71}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cuda_common.cuh">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="convolution.cuh">
+      <Filter>Section 7\Convolution</Filter>
+    </ClInclude>
+    <ClInclude Include="scan.cuh">
+      <Filter>Section 7\Scan</Filter>
+    </ClInclude>
+    <ClInclude Include="histogram.cuh">
+      <Filter>Section 7\Histogram</Filter>
+    </ClInclude>
+    <ClInclude Include="merge_sort.cuh">
+      <Filter>Section 7\MergeSort</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common.cpp">
+      <Filter>Headers</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

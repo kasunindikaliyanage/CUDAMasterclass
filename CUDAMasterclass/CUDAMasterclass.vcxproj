@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{54F26953-9918-4193-BBD6-BD9043654303}</ProjectGuid>
+    <RootNamespace>CUDAMasterclass</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.1.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>compute_35,sm_35</CodeGeneration>
+      <GenerateRelocatableDeviceCode>false</GenerateRelocatableDeviceCode>
+      <Runtime>InheritFromHost</Runtime>
+    </CudaCompile>
+    <CudaLink />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CudaCompile Include="10_constant_stencil_computation.cu" />
+    <CudaCompile Include="10_reduction_with_unrolling_loop.cu" />
+    <CudaCompile Include="14_sum_array.cu" />
+    <CudaCompile Include="12_reduction_complete_unrolling.cu" />
+    <CudaCompile Include="12_simple_shfl_operations.cu" />
+    <CudaCompile Include="11_unrolling_warps_unroll.cu" />
+    <CudaCompile Include="17_device_query.cu" />
+    <CudaCompile Include="2_floating_point_performance_comparison.cu" />
+    <CudaCompile Include="2_multiple_kernel_launch.cu" />
+    <CudaCompile Include="2_numeriacal_accuracy_float_vs_double.cu" />
+    <CudaCompile Include="2_nvvp_output.cu" />
+    <CudaCompile Include="3_simple_cuda_stream_modified.cu" />
+    <CudaCompile Include="3_standard_intrinsic.cu" />
+    <CudaCompile Include="3_standard_intrinsic_performance_cmp.cu" />
+    <CudaCompile Include="4_atomic_add_groundup.cu" />
+    <CudaCompile Include="4_atomic_intro.cu" />
+    <CudaCompile Include="4_atomic_performance_test.cu" />
+    <CudaCompile Include="7_timer_with_cuda_events.cu" />
+    <CudaCompile Include="5_blocking_nonblocking_example.cu" />
+    <CudaCompile Include="4_sum_array_overlapping_ops.cu" />
+    <CudaCompile Include="5_basic_elements.cu" />
+    <CudaCompile Include="6_organization_of_threads.cu" />
+    <CudaCompile Include="7_organization_of_threads.cu" />
+    <CudaCompile Include="8_inter_stream_dependencies.cu" />
+    <CudaCompile Include="9_unique_index_calculation_threadIdx_blockIdx_blockDim.cu" />
+    <CudaCompile Include="9_callback_example.cu" />
+    <CudaCompile Include="11_index calculation for 2D grid 2D thread blocks.cu" />
+    <CudaCompile Include="convolution.cu" />
+    <CudaCompile Include="histogram.cu" />
+    <CudaCompile Include="13_reduction_performance_comparison.cu" />
+    <CudaCompile Include="13_reduction_with_complete_unroll_and_template_func.cu" />
+    <CudaCompile Include="13_reduction_with_warp_shuffle.cu" />
+    <CudaCompile Include="14_reduction with dynamic parallelism.cu" />
+    <CudaCompile Include="1_intro_smem.cu" />
+    <CudaCompile Include="1_need for understand memory model.cu" />
+    <CudaCompile Include="2_register_usage.cu" />
+    <CudaCompile Include="3_row_major_column_major_and_access_mode_test.cu" />
+    <CudaCompile Include="3_pinned_mem_test.cu" />
+    <CudaCompile Include="4_shared_memory_static_vs_dynamic.cu" />
+    <CudaCompile Include="4_zero_copy_memory.cu" />
+    <CudaCompile Include="5_sum_array_with_unified_memory.cu" />
+    <CudaCompile Include="6_misaligned_read.cu" />
+    <CudaCompile Include="5_smem_padding.cu" />
+    <CudaCompile Include="7_reduction_smem.cu" />
+    <CudaCompile Include="7_reduce_smem_complete_unrolling.cu" />
+    <CudaCompile Include="8_mat_transpose_smem.cu" />
+    <CudaCompile Include="9_summary of performance tuning so far.cu" />
+    <CudaCompile Include="merge_sort.cu" />
+    <CudaCompile Include="scan.cu" />
+    <CudaCompile Include="sec1_test.cu" />
+    <CudaCompile Include="test.cu" />
+    <CudaCompile Include="6_device_query_in_occupancy.cu" />
+    <CudaCompile Include="7_misaligned_writes.cu" />
+    <CudaCompile Include="8_SOA_vs_AOS.cu" />
+    <CudaCompile Include="10_index calculation for 2D grid.cu" />
+    <CudaCompile Include="8_synchronization_and_reduction.cu" />
+    <CudaCompile Include="10_matrix_transpose.cu" />
+    <CudaCompile Include="9_reduction_interleaved_pairs.cu" />
+    <CudaCompile Include="9_reduction_warp_divergence_improved.cu" />
+    <CudaCompile Include="compact.cu" />
+    <CudaCompile Include="compact2d.cu" />
+    <CudaCompile Include="convolution_1d_with_constant_memory_mask.cu" />
+    <CudaCompile Include="convolution_1d_with_global_mem_access.cu" />
+    <CudaCompile Include="convolution_1d_with_shared_memory.cu" />
+    <CudaCompile Include="cuda_common.cu" />
+    <CudaCompile Include="14_dynamic_parallelism.cu" />
+    <CudaCompile Include="histogram_v01.cu" />
+    <CudaCompile Include="4_hello_cuda.cu" />
+    <CudaCompile Include="matrix_transpose.cu" />
+    <CudaCompile Include="matrix_transpose_book.cu" />
+    <CudaCompile Include="12_memory_transfer.cu" />
+    <CudaCompile Include="6_occupancy_test.cu" />
+    <CudaCompile Include="prefix_sum_v01.cu" />
+    <CudaCompile Include="prefix_sum_v02.cu" />
+    <CudaCompile Include="print_my_index.cu" />
+    <CudaCompile Include="radix_sort_v01.cu" />
+    <CudaCompile Include="sparse_matrix_v01.cu" />
+    <CudaCompile Include="7_sum_array.cu" />
+    <CudaCompile Include="test_code.cu" />
+    <CudaCompile Include="test_stream.cu" />
+    <CudaCompile Include="3_warp_divergence.cu" />
+    <CudaCompile Include="2_warp_id_and_thread_id.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="convolution.cuh" />
+    <ClInclude Include="cuda_common.cuh" />
+    <ClInclude Include="histogram.cuh" />
+    <ClInclude Include="merge_sort.cuh" />
+    <ClInclude Include="scan.cuh" />
+    <ClInclude Include="test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.1.targets" />
+  </ImportGroup>
+</Project>
